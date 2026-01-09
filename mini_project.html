@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mini_project.css">
+    <title>Project/Mini-Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+
+<!-- NAVIGATION BAR -->
+<nav class="topnav">
+  <!-- HAMBURGER -->
+  <button class="hamburger" onclick="toggleMenu(this)">☰</button>
+
+  <!-- MENU -->
+  <div class="nav-menu">
+
+    <a href="index.html">Home</a>
+
+    <a href="index.html#about">About</a>
+
+    <a href="cv.html">Download CV</a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+      <button class="dropbtn" id="portfolioBtn" type="button" onclick="toggleDropdown()">
+        Portofolio
+      <span class="arrow"></span>
+    </button>
+
+
+      <div class="dropdown-content">
+        <a href="certificate.html">Certificate</a>
+        <a href="mini_project.html" class="active">Mini Project</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+<!-- GARIS PEMBATAS -->
+<hr class="section-divider">
+
+<!-- SECTION TITLE -->
+<div class="section-header">
+  <img src="image/validasi.webp" alt="logo" width="35">
+  <h1 class="section-title">Project/Mini-Project</h1>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+<div class="project-header">
+  <h1 class="project-title">Web Development / Software Engineering</h1>
+  <span class="project-line"></span>
+</div>
+
+<section class="project-timeline">
+
+    <div class="project-timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/Porto.png" alt="Project 2">
+      </div>
+
+      <div class="project-content">
+        <h2>My-Portofolio-Website</h2>
+        <p>
+          Web Development Portofolio Pribadi Berbasis Web
+        </p>
+
+        <span class="project-tech">HTML • CSS • JavaScript • JDN</span>
+
+        <div class="project-links">
+          <a href="https://imammularif.github.io/My-Portofolio-Website/"
+             class="project-link"
+             target="_blank">
+            View Project →
+          </a>
+          <a href="https://github.com/imammularif/My-Portofolio-Website"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/LOGIN.png" alt="Project 1">
+      </div>
+
+      <div class="project-content">
+        <h2>WEBSITE PENILAIAN SISWA SMK N 1 GODEAN</h2>
+        <p>
+          Sistem Informasi Berbasis WEB Siswa Untuk Penilaian Secara Digital Dari Guru menggunakan Username Dan Password Yang dimiliki masing-masing.
+        </p>
+
+        <span class="project-tech">MySQL • XAMPP • PHP • HTML • CSS • Databases • Kerja Praktek</span>
+
+        <div class="project-links">
+            <a href="https://github.com/imammularif/WEBSITE-PENILAIAN-SISWA-SMK-N-1-GODEAN"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/TODOLIST.png" alt="Project 2">
+      </div>
+
+      <div class="project-content">
+        <h2>TO DO LIST</h2>
+        <p>
+          Mini-Project Tugas Capstone Dari Mini-Course/Coding Camp Dari RevoU : Software Enggineering
+        </p>
+
+        <span class="project-tech">HTML5 • TailWind • JavaScript • Git</span>
+
+        <div class="project-links">
+          <a href="https://revou-coding-camp.github.io/codingcamp-04-aug-25-imammularif/"
+             class="project-link"
+             target="_blank">
+            View Project →
+          </a>
+          <a href="https://github.com/Revou-Coding-Camp/codingcamp-04-aug-25-imammularif?tab=readme-ov-file"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="project-timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/react_dasar.jpeg" alt="Project 3">
+      </div>
+
+      <div class="project-content">
+        <h2>Pokemon</h2>
+        <p>
+          Base Project dari Skillvull membuat website menggunakan React
+        </p>
+
+        <span class="project-tech">React Dasar</span>
+
+        <div class="project-links">
+          <a href="https://github.com/imammularif/Pokemon"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kategori dua -->
+
+<div class="project-header">
+  <h1 class="project-title">Databases/Visualisasi</h1>
+  <span class="project-line"></span>
+</div>
+
+<section class="project-timeline">
+  <div class="project-timeline-item scroll-reveal">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/terminal_linux.png" alt="Project 1">
+      </div>
+
+      <div class="project-content">
+        <h2>DOCUMENTASI UBUNTU POSTGRESQL</h2>
+        <p>
+          Repositori ini berisi dokumentasi lengkap seputar instalasi, konfigurasi, dan manajemen PostgreSQL di sistem operasi Ubuntu.
+          Setiap folder mewakili topik berbeda — mulai dari setup awal, pengelolaan user & privilege, hingga praktik CRUD dan backup-restore database
+        </p>
+
+        <span class="project-tech">PostgreSQL • Linux • CLI</span>
+
+        <div class="project-links">
+          <a href="https://github.com/imammularif/DOCUMENTASI-UBUNTU-POSTGRESQL"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/SQL.png" alt="Project 2">
+      </div>
+
+      <div class="project-content">
+        <h2>Basic SQL</h2>
+        <p>
+          Repositori ini dibuat untuk mempelajari dan mempraktikkan perintah dasar SQL.
+          Tujuannya adalah untuk memahami dan menerapkan operasi SQL umum seperti CREATE, INSERT, SELECT, dan kueri sederhana untuk analisis data.
+        </p>
+
+        <span class="project-tech">SQL • DBeaver • MySQL</span>
+
+        <div class="project-links">
+          <a href="https://github.com/imammularif/Basic-SQL"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="project-timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/dashboard.png" alt="Project 3">
+      </div>
+
+      <div class="project-content">
+        <h2>Most popular 1000 Youtube videos</h2>
+        <p>
+          Repositori ini berisi analisis komprehensif dari 1000 video YouTube terpopuler secara global.
+          Tujuan dari proyek ini adalah untuk memahami tren dalam kategori video, metrik keterlibatan, dan preferensi pemirsa global.
+        </p>
+
+        <span class="project-tech">Visualisasi • LookerStudio • SQL</span>
+
+        <div class="project-links">
+          <a href="https://lookerstudio.google.com/reporting/9cf686df-3bfb-49df-8cec-e28011b818c5"
+             class="project-link"
+             target="_blank">
+            View Project →
+          </a>
+           <a href="https://github.com/imammularif/Most-popular-1000-Youtube-videos"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kategori tiga -->
+
+<div class="project-header">
+  <h1 class="project-title">AI/ML/DATA SCIENCE</h1>
+  <span class="project-line"></span>
+</div>
+
+<section class="project-timeline">
+  <div class="project-timeline-item scroll-reveal">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/ABSENSI.png" alt="Project 1">
+      </div>
+
+      <div class="project-content">
+        <h2>Implementasi Sistem Smart Absensi Wajah Menggunakan Metode Local Binary Patterns Histogram (LBPH)</h2>
+        <p>
+         Dalam perancangan dan pembuatan alat ini, bertujuan untuk membangun dan mengimplementasikan pengenalan wajah/Deteksi wajah dan Smart absensi dengan memanfaatkan kamera pada komputer menggunakan metode Algoritma Local Binary Pattern Histogram (LBPH) menggunakan bahasa pemrograman Python.
+        </p>
+
+        <span class="project-tech">Python • Tugas Akhir</span>
+
+        <div class="project-links">
+          <a href="https://github.com/imammularif/SMART-ABSENSI-WITH-FACE-RECOGNITION-LBPH-USING-PYTHON/blob/main/README.md"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-timeline-item">
+    <div class="timeline-dot"></div>
+
+    <div class="project-card">
+      <div class="project-image">
+        <img src="image/project/data-science.png" alt="Project 2">
+      </div>
+
+      <div class="project-content">
+        <h2>DATA SCIENCE WITH PYTHON</h2>
+        <p>
+          -
+        </p>
+
+        <span class="project-tech">Python • Google Colabs</span>
+
+        <div class="project-links">
+          <a href="https://github.com/imammularif/DATA-SCIENCE-WITH-PYTHON"
+             class="project-link secondary"
+             target="_blank">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- /* =========================== FOOTER =========================== */ -->
+
+<footer class="footer">
+  <p class="footer-copy">
+    © 2025 Imammul Arif. All rights reserved.
+  </p>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

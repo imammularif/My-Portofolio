@@ -1,0 +1,474 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, sans-serif;
+  background-color: rgb(9, 3, 25);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  padding-top: calc(var(--topnav-height) + var(--topnav-gap) + 10px);
+
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --topnav-height: 70px; 
+  --topnav-gap: 25px;  
+}
+
+
+/* pembatas */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+.section-title {
+  color: white;
+  margin: 0;
+}
+
+.section-divider {
+  width: 90%;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+
+/* STATE AWAL (sembunyi) */
+.section-header,
+.section-divider {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+/* STATE SAAT MUNCUL */
+.section-header.show,
+.section-divider.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ================= NAVIGASI ================= */
+
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  background: #000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.topnav.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.topnav.scrolled {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(255, 255, 0, 0.15);
+}
+
+/* ===== GLASS NAVBAR ===== */
+.topnav {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 19px;
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  z-index: 9999;     
+  isolation: isolate;
+}
+
+
+
+/* sembunyi / geser ke atas */
+.topnav.hide {
+  transform: translate(-50%, -150%);
+}
+
+/* muncul */
+.topnav.show {
+  transform: translate(-50%, 0);
+}
+
+
+/* ----------------------------------------------------------------- */
+
+/* ================= NAV LINK BASE ================= */
+.topnav a,
+.dropbtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: normal;
+  color: white;
+
+  padding: 14px 16px;
+  margin: 0 10px;
+
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ================= UNDERLINE ONLY ================= */
+.nav-menu a::after,
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+
+  width: 70%;
+  height: 3px;
+  background: yellow;
+  border-radius: 2px;
+
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+/* hover + active */
+.nav-menu a:hover::after,
+.nav-menu a.active::after,
+.dropbtn:hover::after,
+.dropbtn.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ================= NAV MENU ================= */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: yellow;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px grey;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+/* desktop hover */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/* ================= ARROW ================= */
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid white;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    margin-right: auto;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-menu.show {
+    max-height: 500px;
+  }
+
+  /* dropdown mobile */
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    padding-left: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .dropdown-content.show {
+    max-height: 300px;
+  }
+}
+
+/* hover mobile cantact fix */
+@media (max-width: 768px) {
+  .nav-menu a::after,
+  .dropbtn::after {
+    bottom: 4px;          
+  }
+}
+
+/* fix dropdown */
+@media (max-width: 768px) {
+  .dropdown-content {
+    display: block;   
+    position: relative;
+    box-shadow: none;
+    padding-left: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .dropdown-content.show {
+    max-height: 300px;
+  }
+}
+
+
+
+/* <!-----------------------------------------CONTENT --------------------------------------------------------> */
+
+.cv-bar {
+  max-width: 720px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cv-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease;
+}
+
+.cv-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255,255,0,0.25);
+}
+
+.cv-item.latest {
+  border: 1.5px solid yellow;
+}
+
+.cv-text {
+  font-weight: 600;
+  color: white;
+}
+
+.cv-year {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  color: white;
+}
+
+.cv-tag {
+  background: yellow;
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.cv-item a {
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  background: yellow;
+  color: #000;
+}
+
+/* AWAL:  */
+.cv-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* SAAT MUNCUL */
+.cv-item.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* DELAY BERTAHAP */
+.cv-item:nth-child(1) { transition-delay: 0.1s; }
+.cv-item:nth-child(2) { transition-delay: 0.25s; }
+.cv-item:nth-child(3) { transition-delay: 0.4s; }
+
+
+/* mobile responsive */
+
+@media (max-width: 768px) {
+
+  .cv-bar {
+    max-width: 100%;
+    padding: 0 10px;          /* napas kiri kanan */
+    gap: 12px;
+  }
+
+  .cv-item {
+    flex-direction: column;  /* ⬅️ vertikal */
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;      /* lebih ramping */
+  }
+
+  .cv-item.latest {
+    border-width: 1px;
+  }
+
+  /* BARIS ATAS: TAG + TITLE */
+  .cv-item .cv-tag {
+    align-self: flex-start;
+  }
+
+  .cv-text {
+    font-size: 0.95rem;
+  }
+
+  .cv-year {
+    font-size: 0.8rem;
+  }
+
+  /* BUTTON */
+  .cv-item a {
+    align-self: flex-end;    /* tombol ke kanan */
+    padding: 8px 18px;       /* tap friendly */
+    font-size: 0.85rem;
+  }
+
+  /* HOVER DIGANTI FEEL TAP */
+  .cv-item:hover {
+    transform: none;        /* mobile gak perlu hover naik */
+    box-shadow: 0 6px 16px rgba(255,255,0,0.25);
+  }
+
+  /* ANIMASI SCROLL LEBIH HALUS */
+  .cv-item {
+    transform: translateY(20px);
+  }
+}
+
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+  margin-top: 30px;
+  padding: 20px 20px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #081f4e, #040b1f);
+
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #b5c7ff;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 1.6rem;
+  }
+
+  .footer-social a {
+    font-size: 1.5rem;
+  }
+}

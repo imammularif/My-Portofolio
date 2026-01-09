@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cv.css">
+    <title>Download Cv</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"/>
+
+</head>
+<body>
+<div class="main-content">
+
+<!-- NAVIGATION BAR -->
+<nav class="topnav">
+  <!-- HAMBURGER -->
+  <button class="hamburger" onclick="toggleMenu(this)">☰</button>
+
+  <!-- MENU -->
+  <div class="nav-menu">
+
+    <a href="index.html">Home</a>
+
+    <a href="index.html#about">About</a>
+
+    <a href="cv.html" class="active">Download CV</a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+      <button class="dropbtn" type="button" onclick="toggleDropdown()">
+        Portofolio
+        <span class="arrow"></span>
+      </button>
+
+      <div class="dropdown-content">
+        <a href="certificate.html">Certificate</a>
+        <a href="mini_project.html">Mini Project</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+<!-- GARIS PEMBATAS -->
+<hr class="section-divider">
+
+<!-- SECTION TITLE -->
+<div class="section-header">
+  <img src="image/validasi.webp" alt="logo" width="35">
+  <h1 class="section-title">My Curriculum Vitae</h1>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+
+<section class="cv-section" id="cv">
+  <div class="cv-line"></div>
+
+  <div class="cv-bar">
+    <div class="cv-item latest">
+      <span class="cv-tag">Latest</span>
+      <span class="cv-text">CV Terbaru</span>
+      <a href="document/2025/INDO/CV_IMAMMUL ARIF.pdf" target="_blank">Open</a>
+    </div>
+
+    <div class="cv-item old">
+      <span class="cv-text">CV Lama</span>
+      <span class="cv-year">2023</span>
+      <a href="document/2023/CV.IMAMMUL ARIF(INDO).pdf" target="_blank">Open</a>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+
+<!-- /* =========================== FOOTER =========================== */ -->
+
+<footer class="footer">
+  <p class="footer-copy">
+    © 2025 Imammul Arif. All rights reserved.
+  </p>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

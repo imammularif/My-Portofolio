@@ -1,0 +1,452 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, sans-serif;
+  background-color: rgb(9, 3, 25);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  padding-top: calc(var(--topnav-height) + var(--topnav-gap) + 10px);
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --topnav-height: 70px; 
+  --topnav-gap: 25px;   
+}
+
+
+
+/* pembatas */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  color: white;
+  margin: 0;
+}
+
+.section-divider {
+  width: 90%;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+
+/* STATE AWAL (sembunyi) */
+.section-header,
+.section-divider {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+/* STATE SAAT MUNCUL */
+.section-header.show,
+.section-divider.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ================= NAVIGASI ================= */
+/* ===== GLASS NAVBAR ===== */
+.topnav {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 19px;
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  z-index: 9999;     /* 🔥 INI KUNCI UTAMA */
+  isolation: isolate;/* 🔒 ANTI DITEMBUS */
+}
+
+
+
+/* sembunyi / geser ke atas */
+.topnav.hide {
+  transform: translate(-50%, -150%);
+}
+
+/* muncul */
+.topnav.show {
+  transform: translate(-50%, 0);
+}
+
+
+/* ----------------------------------------------------------------- */
+
+/* ================= NAV LINK BASE ================= */
+.topnav a,
+.dropbtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: normal;
+  color: white;
+
+  padding: 14px 16px;
+  margin: 0 10px;
+
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ================= UNDERLINE ONLY ================= */
+.nav-menu a::after,
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+
+  width: 70%;
+  height: 3px;
+  background: yellow;
+  border-radius: 2px;
+
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+/* hover + active */
+.nav-menu a:hover::after,
+.nav-menu a.active::after,
+.dropbtn:hover::after,
+.dropbtn.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ================= NAV MENU ================= */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: yellow;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px grey;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+/* desktop hover */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/* ================= ARROW ================= */
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid white;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    margin-right: auto;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-menu.show {
+    max-height: 500px;
+  }
+
+  /* dropdown mobile */
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    padding-left: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .dropdown-content.show {
+    max-height: 300px;
+  }
+}
+
+/* hover mobile cantact fix */
+@media (max-width: 768px) {
+  .nav-menu a::after,
+  .dropbtn::after {
+    bottom: 4px;          /* naik ke dalam area link */
+  }
+}
+
+/* fix dropdown */
+@media (max-width: 768px) {
+  .dropdown-content {
+    display: block;      /* WAJIB */
+    position: relative;
+    box-shadow: none;
+    padding-left: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .dropdown-content.show {
+    max-height: 300px;
+  }
+}
+
+
+/* ==========================SERTIFICATION SECTION ======================= */
+
+.certificate-section {
+  padding: 30px 10%;
+}
+
+/* JUDUL */
+.certificate-year {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+/* GRID 4 HORIZONTAL */
+.certificate-grid {
+  perspective: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 220px); /* KUNCI 4 */
+  gap: 40px;
+}
+
+/* CARD */
+.certificate-card {
+  position: relative;
+  overflow: visible; /* wajib */
+  background: #081f4e;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 6px 12px rgba(77,163,255,.4);
+  transition: transform .3s ease, box-shadow .3s ease;
+  color: white;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;   /* 🔥 INI YANG KAMU BUTUH */
+  background: #000;      /* biar space kosong rapi */
+  border-radius: 10px;
+  transition: transform .35s ease;
+}
+
+
+
+
+.certificate-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: .8rem;
+  text-align: center;
+  opacity: .85;
+}
+
+.certificate-year {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+  color: #fff;
+  position: relative;
+}
+
+/* GARIS KUNING */
+.certificate-year::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  background: yellow;
+  margin-left: 16px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.certificate-year::after {
+  height: 2px;
+  opacity: 0.9;
+}
+
+/* hover card */
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(255, 255, 0, 0.4);
+}
+
+/* IMAGE NORMAL */
+.certificate-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;        /* 🔑 FULL GAMBAR */
+  background: #000;
+  border-radius: 10px;
+  transition: transform .35s ease;
+}
+
+/* IMAGE HOVER (CUMA ZOOM TIPIS) */
+.certificate-card:hover img {
+  transform: scale(1.05);     /* dikit aja, sopan */
+}
+
+
+
+
+/* Responsive */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, 220px);
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .certificate-section {
+    padding: 20px 6%;
+  }
+
+  .certificate-year {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .certificate-year::after {
+    display: block;
+    margin: 10px auto 0;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .certificate-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .certificate-card img {
+    height: 140px;
+  }
+}
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+  margin-top: 30px;
+  padding: 20px 20px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #081f4e, #040b1f);
+
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #b5c7ff;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 1.6rem;
+  }
+
+  .footer-social a {
+    font-size: 1.5rem;
+  }
+}
