@@ -485,14 +485,9 @@ body {
 }
 
 
-/* ================= HOVER EFFECT (DESKTOP) ================= */
-@media (hover: hover) and (pointer: fine) {
   .contact-box:hover {
     transform: translateY(-8px) scale(1.02);
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow:
-      0 14px 30px rgba(0, 0, 0, 0.45),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 9px 10px yellow;
   }
 
   .contact-box:hover .contact-icon {
@@ -504,30 +499,6 @@ body {
     background: rgba(255, 255, 0, 0.85);
     color: #000;
   }
-}
-
-/* ================= TAP EFFECT (MOBILE) ================= */
-.contact-box:active {
-  transform: scale(0.97);
-  background: rgba(255, 255, 255, 0.14);
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.4),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-}
-
-.social-icons a:active {
-  transform: scale(0.9);
-  background: yellow;
-  color: #000;
-}
-
-/* ================= SMOOTH FEEL ================= */
-.contact-box,
-.social-icons a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-
 
 
 /* ================= RESPONSIVE GRID ================= */
@@ -542,7 +513,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
 
 
 /* ================= FOOTER ================= */

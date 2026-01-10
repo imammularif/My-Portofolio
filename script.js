@@ -461,12 +461,18 @@ document.querySelectorAll('.project-card').forEach(card => {
   // CONTACT PAGE ANIMATION
 
 const revealsCON = document.querySelectorAll(".reveal");
+let revealedCount = 0;
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && !entry.target.classList.contains("active")) {
       entry.target.classList.add("active");
-      observer.unobserve(entry.target); 
+      observer.unobserve(entry.target);
+
+      revealedCount++;
+      if (revealedCount === revealsCON.length) {
+        observer.disconnect();
+      }
     }
   });
 }, {
@@ -474,6 +480,7 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 });
 
 revealsCON.forEach(el => revealObserver.observe(el));
+
 
 
 
