@@ -245,7 +245,7 @@ body {
 @media (max-width: 768px) {
   .nav-menu a::after,
   .dropbtn::after {
-    bottom: 4px;          /* naik ke dalam area link */
+    bottom: 4px;        
   }
 }
 

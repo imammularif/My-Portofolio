@@ -905,14 +905,13 @@ html {
 }
 
 .icon-item:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(255,255,0,0.35);
+  transform: translateY(-6px) scale(1.07);
+  box-shadow:
+    0 10px 20px rgba(255,255,0,0.35),
+    0 0 0 1px rgba(255,255,255,0.25);
 }
 
-/* Mobile tap */
-.icon-item:active {
-  transform: scale(0.95);
-}
+
 
 /* Icon reveal animation */
 .icon-item {
@@ -927,9 +926,6 @@ html {
     opacity 0.5s ease,
     transform 0.5s ease;
 }
-
-
-
 
 
 /* ================= EDUCATION ================= */
@@ -1043,20 +1039,19 @@ html {
 }
 
 .timeline-box {
-  border: 2px solid transparent; /* penting */
+  border: 2px solid transparent; 
   transition: 
     box-shadow 0.35s ease,
     background 0.35s ease,
     border-color 0.35s ease;
 }
 
-/* HAPUS hover di timeline-item */
+
 .timeline-item:hover {
   --hoverY: 0;
   --hoverScale: 1;
 }
 
-/* PINDAHKAN hover ke BOX */
 .timeline-box {
   transition:
     box-shadow 0.35s ease,
@@ -1092,8 +1087,6 @@ html {
     border-color 0.35s ease,
     transform 0.35s ease;
 }
-
-
 
 
 /* Mobile Resposive Timelinde */
@@ -1427,14 +1420,8 @@ align-items: flex-start;
   box-shadow: 
     0 9px 10px yellow,
     inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-
 }
 
-.project-card h3,
-.project-card p,
-.project-link {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
 
 /* .project-card.show:hover h3 {
   transform: translateY(-2px);

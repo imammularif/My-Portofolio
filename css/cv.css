@@ -372,14 +372,14 @@ body {
 
   /* BUTTON */
   .cv-item a {
-    align-self: flex-end;    /* tombol ke kanan */
-    padding: 8px 18px;       /* tap friendly */
+    align-self: flex-end;  
+    padding: 8px 18px;      
     font-size: 0.85rem;
   }
 
   /* HOVER DIGANTI FEEL TAP */
   .cv-item:hover {
-    transform: none;        /* mobile gak perlu hover naik */
+    transform: none;       
     box-shadow: 0 6px 16px rgba(255,255,0,0.25);
   }
 
@@ -387,7 +387,7 @@ body {
   .cv-item {
     transform: translateY(20px);
   }
-}
+
 
 /* AWAL:  */
 .cv-item {
