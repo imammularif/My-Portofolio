@@ -460,26 +460,16 @@ document.querySelectorAll('.project-card').forEach(card => {
 
   // CONTACT PAGE ANIMATION
 
-const revealsCON = document.querySelectorAll(".reveal");
-let revealedCount = 0;
+  // tap contact mobile
 
-const revealObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !entry.target.classList.contains("active")) {
-      entry.target.classList.add("active");
-      observer.unobserve(entry.target);
-
-      revealedCount++;
-      if (revealedCount === revealsCON.length) {
-        observer.disconnect();
-      }
-    }
+  document.querySelectorAll('.contact-box').forEach(box => {
+  box.addEventListener('click', () => {
+    document.querySelectorAll('.contact-box')
+      .forEach(b => b.classList.remove('is-active'));
+    box.classList.add('is-active');
   });
-}, {
-  threshold: 0.2
 });
 
-revealsCON.forEach(el => revealObserver.observe(el));
 
 
 
