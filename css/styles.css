@@ -1617,8 +1617,8 @@ align-items: flex-start;
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 16px;
+  padding: 14px 35px;
+  margin-bottom: -50px;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -1647,6 +1647,7 @@ align-items: flex-start;
   background: yellow;
   color: #000;
   transition: all 0.3s ease;
+  margin-top: 80px;
 }
 
 .contact-form button:hover {
@@ -1892,6 +1893,20 @@ align-items: flex-start;
     font-size: 1.5rem;
   }
 }
+
+
+/* error */
+
+/* error style */
+.error-msg {
+  display: block;
+  color: #ff4d4f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  min-height: 18px; /* supaya layout nggak lompat */
+}
+
+
 
 
 

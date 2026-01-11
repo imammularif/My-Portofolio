@@ -573,6 +573,52 @@ typeLoop();
 
 
 
+// input error
+
+
+// Ambil form dan tombol
+const form = document.querySelector('.contact-form');
+const inputs = form.querySelectorAll('input, textarea');
+const button = form.querySelector('button');
+
+// Buat span error **di atas input**
+inputs.forEach(input => {
+  const span = document.createElement('span');
+  span.classList.add('error-msg');
+  input.insertAdjacentElement('beforebegin', span); // di atas input
+});
+
+button.addEventListener('click', (e) => {
+  e.preventDefault(); // cegah reload
+
+  let isValid = true;
+
+  inputs.forEach(input => {
+    const errorMsg = input.previousElementSibling; // span di atas
+    if (!input.value.trim()) {
+      errorMsg.textContent = 'Harap diisi dulu';
+      input.style.border = '2px solid #ff4d4f';
+      isValid = false;
+    } else {
+      errorMsg.textContent = '';
+      input.style.border = 'none';
+    }
+  });
+
+  if (isValid) {
+    alert('Form berhasil dikirim! 🚀');
+    form.reset();
+  }
+});
+
+
+
+
+
+
+
+
+
 
 
 

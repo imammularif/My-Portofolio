@@ -467,15 +467,31 @@ Learned how to process data, create charts, build KPI metrics, and develop inter
       <h2>Send Me a Message</h2>
       <p>Let’s build something cool together 🚀</p>
 
+      <!-- Name Inputs -->
       <div class="input-row">
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
+        <div class="input-wrapper">
+          <span class="error-msg"></span>
+          <input type="text" placeholder="First Name" required>
+        </div>
+        <div class="input-wrapper">
+          <span class="error-msg"></span>
+          <input type="text" placeholder="Last Name" required>
+        </div>
       </div>
 
-      <input type="email" placeholder="Email Address" required>
+      <!-- Email Input -->
+      <div class="input-wrapper">
+        <span class="error-msg"></span>
+        <input type="email" placeholder="Email Address" required>
+      </div>
 
-      <textarea placeholder="Your Message..." rows="5" required></textarea>
+      <!-- Message Textarea -->
+      <div class="input-wrapper">
+        <span class="error-msg"></span>
+        <textarea placeholder="Your Message..." rows="5" required></textarea>
+      </div>
 
+      <!-- Submit Button -->
       <button type="submit">Send Message</button>
     </div>
 
@@ -486,6 +502,26 @@ Learned how to process data, create charts, build KPI metrics, and develop inter
 
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- comntact -->
