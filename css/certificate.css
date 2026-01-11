@@ -270,9 +270,6 @@ body {
 
 .certificate-section {
   padding: 30px 10%;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 /* SAAT MASUK VIEWPORT */
@@ -281,9 +278,6 @@ body {
   transform: translateY(0);
 }
 
-.certificate-section {
-  border: 2px solid red;
-}
 
 
 /* JUDUL */
@@ -393,10 +387,6 @@ body {
 .certificate-card:hover img {
   transform: scale(1.05);     
 }
-
-
-
-
 
 
 /* Responsive */
