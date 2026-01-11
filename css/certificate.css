@@ -272,13 +272,6 @@ body {
   padding: 30px 10%;
 }
 
-/* SAAT MASUK VIEWPORT */
-.certificate-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 
 /* JUDUL */
 .certificate-year {
@@ -365,22 +358,19 @@ body {
 }
 
 /* hover card */
+.certificate-card {
+  transition: 
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .certificate-card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-10px) scale(1.01);
   box-shadow: 
     0 9px 10px yellow,
     inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-
 }
 
-.certificate-card img {
-  width: 100%;
-  height: 110px;
-  object-fit: contain;        
-  background: #000;
-  border-radius: 10px;
-  transition: transform .35s ease;
-}
 
 
 /* Responsive */

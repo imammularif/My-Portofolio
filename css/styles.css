@@ -1320,14 +1320,14 @@ align-items: flex-start;
 
 /* ======================= MY PROJECT/CERITICATE ======================== */
 
-/* ================= PROJECTS ================= */
+
 .projects {
   padding: 80px 10%;
   text-align: center;
   margin-top: -50px;
 }
 
-/* ================= GRID ================= */
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 365px);
@@ -1335,7 +1335,7 @@ align-items: flex-start;
   gap: 30px;
 }
 
-/* ================= CARD ================= */
+
 .project-card {
   background-color: #081f4e;
   border-radius: 20px;
@@ -1618,7 +1618,7 @@ align-items: flex-start;
 .contact-form textarea {
   width: 100%;
   padding: 14px 50px;
-  padding-left: 20px; /* kecilin biar makin ke kiri */
+  padding-left: 20px; 
   margin-bottom: -50px;
   border-radius: 10px;
   border: none;
