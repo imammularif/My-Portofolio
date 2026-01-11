@@ -155,6 +155,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// RENDER
+window.addEventListener("load", () => {
+  requestAnimationFrame(() => {
+    document.querySelectorAll(".fill").forEach(fill => {
+      fill.style.width = fill.dataset.width;
+    });
+  });
+});
+
+
+
+
 // ICON PAGE ANIMATION
 
 const iconItems = document.querySelectorAll('.icon-item');
