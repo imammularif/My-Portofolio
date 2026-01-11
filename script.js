@@ -588,7 +588,7 @@ button.addEventListener('click', (e) => {
     if (!input.value.trim()) {
       errorMsg.textContent = 'Harap diisi dulu';
       errorMsg.classList.add('show');
-      input.style.border = '2px solid #ff4d4f';
+      // input.style.border = '2px solid #ff4d4f';
       isValid = false;
     } else {
       errorMsg.textContent = ' ';

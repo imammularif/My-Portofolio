@@ -1906,9 +1906,9 @@ align-items: flex-start;
   font-size: 0.85rem;
   margin-top: 4px;
 
-  min-height: 18px;   /* ruang selalu ada */
-  line-height: 18px;  /* kunci tinggi text */
-  visibility: hidden; /* sembunyi tanpa hilang ruang */
+  min-height: 18px;   
+  line-height: 18px; 
+  visibility: hidden; 
 }
 
 .error-msg.show {
