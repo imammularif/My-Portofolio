@@ -230,6 +230,7 @@ html {
 .dropdown:hover .dropbtn::after,
 .dropdown.active .dropbtn::after {
   width: 60%;
+  
 }
 
 /* dropdown menu */
@@ -238,7 +239,11 @@ html {
   top: calc(100% + 6px);
   left: 0;
   min-width: 180px;
-  background: #081f4e;
+  background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,.35);
   opacity: 0;
@@ -328,27 +333,8 @@ html {
   }
 }
 
-/* fix dropdown */
-@media (max-width: 768px) {
-  .dropdown-content {
-    display: block;    
-    position: relative;
-    box-shadow: none;
-    padding-left: 20px;
-
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
-
-  .dropdown-content.show {
-    max-height: 300px;
-  }
-}
 
 
-
-/* ----------------------------------------------------------------------- */
 
 
 /* ====================== PARALLAX SECTION ======================== */

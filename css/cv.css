@@ -161,9 +161,6 @@ body {
 }
 
 
-
-/* ----------------------------------------------------------------------- */
-
 /* --- UNDERLINE ONLY --- */
 .nav-menu a,
 .dropbtn {
@@ -212,6 +209,8 @@ body {
   cursor: pointer;
   color: yellow;
 }
+
+
 /* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
@@ -253,7 +252,11 @@ body {
   top: calc(100% + 6px);
   left: 0;
   min-width: 180px;
-  background: #081f4e;
+  background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,.35);
   opacity: 0;
