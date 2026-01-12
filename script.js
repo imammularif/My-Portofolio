@@ -631,31 +631,27 @@ button.addEventListener('click', (e) => {
 
 
 
+// btn scroll/animated
 
-// animated scroll certif
+document.addEventListener("DOMContentLoaded", () => {
+  // semua elemen scroll
+  const scrollItems = document.querySelectorAll(".certificate-card, .view-all .btn-primary");
 
-// Ambil semua card
-// const cardsANI = document.querySelectorAll('.certificate-card');
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // biar sekali animasi
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-// function revealCardsOnScroll() {
-//   const windowHeight = window.innerHeight;
-//   const revealPoint = 150; // jarak sebelum card muncul
+  scrollItems.forEach(el => observer.observe(el));
+});
 
-//   cardsANI.forEach(card => {  // pake cardsANI, bukan cards
-//     const cardTop = card.getBoundingClientRect().top;
-
-//     if (cardTop < windowHeight - revealPoint) {
-//       card.classList.add('active');
-//     } else {
-//       // kalau mau efek reset saat di-scroll ke atas, uncomment ini
-//       // card.classList.remove('active');
-//     }
-//   });
-// }
-
-// // Jalankan di scroll dan load
-// window.addEventListener('scroll', revealCardsOnScroll);
-// window.addEventListener('load', revealCardsOnScroll);
 
 
 

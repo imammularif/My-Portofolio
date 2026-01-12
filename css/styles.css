@@ -1425,36 +1425,6 @@ align-items: flex-start;
   text-decoration: underline;
 }
 
-/* --- VIEW ALL BUTTON --- */
-.view-all {
-  margin-top: -30px;
-  display: flex;
-  justify-content: center;
-}
-
-/* --- BUTTON --- */
-.btn-primary {
-  padding: 14px 36px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #ffd700, #ffb700);
-  color: #081f4e;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.45);
-
-  transition: transform 0.35s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-6px) scale(1.05);
-}
-
-.btn-primary:active {
-  transform: translateY(-2px) scale(1.02);
-}
-
 
 /* --- PROJECTS --- */
 .projects {
@@ -1575,6 +1545,53 @@ align-items: flex-start;
 .btn-primary:active {
   transform: translateY(-2px) scale(1.02);
 }
+
+/* animated scroll */
+/* --- SCROLL ANIMATION BUTTON --- */
+.view-all .btn-primary {
+  /* pakai variable */
+  --ty: 40px;
+  --s: 0.95;
+
+  opacity: 0;
+  transform: translateY(var(--ty)) scale(var(--s));
+
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffd700, #ffb700);
+  color: #081f4e;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.45);
+
+  transition: 
+    opacity 0.6s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* SAAT MUNCUL (SCROLL) */
+.view-all .btn-primary.show {
+  opacity: 1;
+  --ty: 0;
+  --s: 1;
+}
+
+/* HOVER */
+.view-all .btn-primary.show:hover {
+  --ty: -6px;
+  --s: 1.05;
+  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.6);
+}
+
+/* ACTIVE */
+.view-all .btn-primary.show:active {
+  --ty: -2px;
+  --s: 1.02;
+}
+
+
 
 
 /* --- MOBILE --- */
