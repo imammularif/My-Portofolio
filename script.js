@@ -632,6 +632,31 @@ button.addEventListener('click', (e) => {
 
 
 
+// animated scroll certif
+
+// Ambil semua card
+// const cardsANI = document.querySelectorAll('.certificate-card');
+
+// function revealCardsOnScroll() {
+//   const windowHeight = window.innerHeight;
+//   const revealPoint = 150; // jarak sebelum card muncul
+
+//   cardsANI.forEach(card => {  // pake cardsANI, bukan cards
+//     const cardTop = card.getBoundingClientRect().top;
+
+//     if (cardTop < windowHeight - revealPoint) {
+//       card.classList.add('active');
+//     } else {
+//       // kalau mau efek reset saat di-scroll ke atas, uncomment ini
+//       // card.classList.remove('active');
+//     }
+//   });
+// }
+
+// // Jalankan di scroll dan load
+// window.addEventListener('scroll', revealCardsOnScroll);
+// window.addEventListener('load', revealCardsOnScroll);
+
 
 
 
