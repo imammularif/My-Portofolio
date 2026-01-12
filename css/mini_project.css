@@ -582,13 +582,15 @@ body {
 
   /* ITEM */
   .project-timeline-item {
+    position: relative;
     margin-bottom: 50px;
   }
 
-  /* DOT */
+  /* DOT → CENTER VERTIKAL CARD */
   .timeline-dot {
-    left: 5px;
-    top: 28px;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 14px;
     height: 14px;
   }
@@ -599,6 +601,7 @@ body {
     margin-left: 40px;
     gap: 18px;
     padding: 20px;
+    text-align: center;
   }
 
   /* IMAGE */
@@ -622,6 +625,7 @@ body {
 
   /* LINKS */
   .project-links {
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
   }
@@ -632,7 +636,7 @@ body {
   }
 }
 
-/* ================= SMALL MOBILE (<= 480px) ================= */
+
 @media (max-width: 480px) {
 
   .project-title {
@@ -648,10 +652,8 @@ body {
     height: 150px;
   }
 
-  .timeline-dot {
-    top: 200px;
-  }
 }
+
 
 
 
