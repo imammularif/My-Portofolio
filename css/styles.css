@@ -19,7 +19,6 @@ html {
 }
 
 
-
 /* ========================= PEMBATAS ============================= */
 
 /* pembatas */
@@ -56,143 +55,6 @@ html {
 .section-divider.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-
-/* ====================== PARALLAX SECTION ======================== */
-
-.typing-text {
-  display: inline-block;
-  white-space: nowrap;
-
-  line-height: 1.2;      
-  min-height: 1.2em;   
-  margin: 0;
-
-  border-right: 3px solid yellow;
-  padding-right: 0px;
-
-  animation: blink 0.9s step-end infinite;
-}
-
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-
-/* PROFILE ANIMATION */
-.profile {
-  margin-top: 50px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.profile.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* PARALLAX SECTION */
-.parallax-section {
-  position: relative;
-  overflow: hidden;
-  min-height: 60vh;
-  min-height: 60svh;
-}
-
-/* BACKGROUND */
-.parallax-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../image/bg.jpeg");
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-
-  will-change: transform;
-  transform: translateZ(0);
-}
-
-/* LEFT CONTENT */
-.profile .left h1,
-.profile .left h3 {
-  margin: 0;
-}
-
-/* PROFILE IMAGE DESKTOP */
-.profile .right img {
-  width: 290px;
-  height: 290px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.profile .right img:hover {
-  transform: translateY(-10px); 
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .parallax-bg {
-  transform: translateY(var(--parallax, 0px));
-  will-change: transform;
-}
-
-
-  .parallax-section {
-    min-height: auto;
-  }
-
-  /* PROFILE LAYOUT MOBILE */
-  .profile {
-    flex-direction: row;
-    align-items: center;
-    padding: 80px 6% 200px;
-    gap: 14px;
-    position: relative;
-    left: -10px; 
-  }
-
-  .profile .left h1 {
-    font-size: 1.15rem;
-    line-height: 1.3;
-  }
-
-  .profile .left h3 {
-    font-size: 0.9rem;
-    opacity: 0.85;
-  }
-
-  .profile .right img {
-    width: 89px;
-    height: 89px;
-    position: relative;
-    left: -10px; 
-  }
-}
-
-@media (max-width: 768px) {
-  .typing-text {
-    line-height: 1.2;
-    height: 1.2em;          
-    display: inline-flex;   
-    align-items: center;    
-    
-    border-right: 2px solid yellow; 
-    transform: translateY(0); 
-  }
-}
-
-/* Matikan hover (mobile) */
-@media (max-width: 768px) {
-  .profile .right img:hover {
-    transform: none;
-  }
 }
 
 
@@ -429,8 +291,147 @@ html {
 }
 
 
+/* ====================== PARALLAX SECTION ======================== */
 
-/* ============================= SAMPUL ============================================ */
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+
+  line-height: 1.2;      
+  min-height: 1.2em;   
+  margin: 0;
+
+  border-right: 3px solid yellow;
+  padding-right: 0px;
+
+  animation: blink 0.9s step-end infinite;
+}
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+/* PARALLAX SECTION */
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  min-height: 60svh;
+}
+
+/* BACKGROUND */
+.parallax-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../image/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* profil section */
+/* PROFILE ANIMATION */
+.profile {
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.profile.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LEFT CONTENT */
+.profile .left h1,
+.profile .left h3 {
+  margin: 0;
+}
+
+/* PROFILE IMAGE DESKTOP */
+.profile .right img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile .right img:hover {
+  transform: translateY(-10px); 
+}
+
+
+/* responive */
+
+@media (max-width: 768px) {
+
+  .parallax-bg {
+  transform: translateY(var(--parallax, 0px));
+  will-change: transform;
+}
+
+
+  .parallax-section {
+    min-height: auto;
+  }
+
+  /* PROFILE LAYOUT MOBILE */
+  .profile {
+    flex-direction: row;
+    align-items: center;
+    padding: 80px 6% 200px;
+    gap: 14px;
+    position: relative;
+    left: -10px; 
+  }
+
+  .profile .left h1 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .profile .left h3 {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+
+  .profile .right img {
+    width: 89px;
+    height: 89px;
+    position: relative;
+    left: -10px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-text {
+    line-height: 1.2;
+    height: 1.2em;          
+    display: inline-flex;   
+    align-items: center;    
+    
+    border-right: 2px solid yellow; 
+    transform: translateY(0); 
+  }
+}
+
+/* Matikan hover img (mobile) */
+@media (max-width: 768px) {
+  .profile .right img:hover {
+    transform: none;
+  }
+}
+
+
+/* ============================= HEADLINE & IMG ============================================ */
 
 /* Content 1 */
 
