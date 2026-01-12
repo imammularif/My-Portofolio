@@ -161,6 +161,9 @@ body {
 }
 
 
+
+/* ----------------------------------------------------------------------- */
+
 /* --- UNDERLINE ONLY --- */
 .nav-menu a,
 .dropbtn {
@@ -210,8 +213,6 @@ body {
   color: yellow;
 }
 
-
-/* ================= DROPDOWN ================= */
 /* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
@@ -254,11 +255,6 @@ body {
   top: calc(100% + 6px);
   left: 0;
   min-width: 180px;
-  background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,.35);
   opacity: 0;
@@ -286,60 +282,6 @@ body {
   transition: background 0.25s ease, padding-left 0.25s ease;
 }
 
-/* hover item */
-/* .dropdown-content a:hover {
-  background: rgba(255, 215, 0, 0.15);
-  padding-left: 24px;
-} */
-
-/* ================= MOBILE DROPDOWN ================= */
-
-@media (max-width: 768px) {
-  .dropdown-content a {
-    padding: 8px 14px !important;
-    line-height: 1.2;
-    font-size: 15px;
-    left: -10px;
-  }
-}
-
-
-@media (max-width: 768px) {
-
-  /* matiin hover behaviour */
-  .dropdown:hover .dropdown-content {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-  }
-
-  /* dropdown via tap */
-  .dropdown.active .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-
-  /* underline ikut tap */
-  .dropdown:hover .dropbtn::after {
-    width: 0;
-  }
-
-  .dropdown.active .dropbtn::after {
-    width: 60%;
-  }
-
-  /* biar tap area enak */
-  .dropbtn {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .arrow {
-  transform: translateX(-55px); 
-}
-}
 
 
 /* --- ARROW --- */
@@ -375,32 +317,6 @@ body {
 
   /* dropdown mobile */
   .dropdown-content {
-    position: relative;
-    box-shadow: none;
-    padding-left: 20px;
-
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
-
-  .dropdown-content.show {
-    max-height: 300px;
-  }
-}
-
-/* hover mobile cantact fix */
-@media (max-width: 768px) {
-  .nav-menu a::after,
-  .dropbtn::after {
-    bottom: 4px;          
-  }
-}
-
-/* fix dropdown */
-@media (max-width: 768px) {
-  .dropdown-content {
-    display: block;    
     position: relative;
     box-shadow: none;
     padding-left: 20px;
