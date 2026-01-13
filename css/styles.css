@@ -759,10 +759,7 @@ html {
   color: #fffbfb;
 }
 
-.fill {
-  width: 0;
-  transition: width 1.2s ease;
-}
+
 
 /* Hoover */
 .box {
