@@ -144,27 +144,34 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const revealElements = document.querySelectorAll('.certificate-card, .certificate-year');
+  const revealElements = Array.from(document.querySelectorAll('.certificate-card, .certificate-year'));
 
   function revealOnScroll() {
     const windowHeight = window.innerHeight;
     const revealPoint = 150;
 
-    revealElements.forEach(el => {
-      const elTop = el.getBoundingClientRect().top;
+    // ambil elemen yang belum aktif
+    const hiddenElements = revealElements.filter(el => !el.classList.contains('active'));
 
-      if (elTop < windowHeight - revealPoint) {
-        el.classList.add('active');
-      }
+    // ambil elemen yang visible saat scroll
+    const visibleElements = hiddenElements.filter(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < windowHeight - revealPoint && rect.bottom > 0;
+    });
+
+    // tambahkan stagger delay hanya untuk elemen visible saat ini
+    visibleElements.forEach((el, i) => {
+      el.style.transitionDelay = (i * 0.15) + 's';
+      el.classList.add('active');
     });
   }
 
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
 });
-
-
 </script>
+
+
 
 
 
