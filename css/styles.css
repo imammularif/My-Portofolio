@@ -2226,6 +2226,47 @@ align-items: flex-start;
 
 
 
+/* clean landscape */
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .profile {
+    min-height: 100vh;
+    padding: 40px 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left h1 {
+    font-size: 28px;
+  }
+
+  .left h3 {
+    font-size: 13px;
+  }
+
+  .right img {
+    max-width: 180px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .typing-text,
+  .parallax-bg {
+    animation: none !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .profile {
+    text-align: left;
+  }
+
+  .cta-buttons {
+    justify-content: flex-start;
+  }
+}
+
+
 
 
 
