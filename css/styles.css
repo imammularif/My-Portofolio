@@ -96,7 +96,7 @@ html {
   .cta-buttons {
     flex-direction: column; 
     gap: 12px;             
-    margin-top: 15px;
+    margin-top: 3vh;
     align-items: center;   
   }
 
@@ -109,7 +109,7 @@ html {
 
   /* Social Media Icons */
   .social-icons {
-    margin-top: 20px;
+    margin-top: 4vh;
     gap: 12px;
     justify-content: center;
     flex-wrap: wrap;        
@@ -131,6 +131,9 @@ html {
   }
 
 }
+
+
+
 
 
 
@@ -622,6 +625,7 @@ html {
 .profile {
   display: flex;
   height: 100vh;
+  min-height: 70vh; 
 }
 
 .box {
