@@ -89,44 +89,50 @@ html {
 }
 
 /* MOBILE RESPONSIVE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  /* Social icons tetap seperti sebelumnya */
+
+  /* CTA Buttons */
+  .cta-buttons {
+    flex-direction: column; /* tombol stack di atas-bawah di HP */
+    gap: 12px;             /* jarak lebih kecil */
+    margin-top: 15px;
+    align-items: center;   /* tengah layar */
+  }
+
+  .cta-buttons .btn {
+    padding: 8px 18px;     /* tombol lebih kecil */
+    font-size: 12px;       /* font lebih proporsional */
+    width: 170px;          /* lebar tombol pas HP */
+    text-align: center;
+  }
+
+  /* Social Media Icons */
   .social-icons {
     margin-top: 20px;
     gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* tengah layar */
+    flex-wrap: wrap;         /* pindah ke baris kedua jika sempit */
   }
 
   .social {
-    width: 40px;
+    width: 40px;   /* ikon lebih kecil */
     height: 40px;
     border-radius: 10px;
   }
 
   .social img {
-    width: 20px;
+    width: 20px;   /* ikon pas ukuran tombol */
     height: 20px;
   }
 
   .social:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* hover lebih subtle */
   }
 
-  /* Huruf lebih kecil di mobile */
-  .profile h1 {
-    font-size: 28px; /* sebelumnya mungkin 40px atau lebih */
-  }
-
-  .profile h3 {
-    font-size: 16px; /* sebelumnya 18-20px */
-  }
-
-  .cta-buttons .btn {
-    font-size: 10px; /* tombol lebih pas di mobile */
-    padding: 8px 16px;
-  }
 }
+
+
 
 
 
@@ -589,6 +595,8 @@ html {
 
 /* typing text */
 .typing-text {
+
+  
   display: inline-block;
   white-space: nowrap;
 
