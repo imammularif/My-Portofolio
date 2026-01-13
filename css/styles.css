@@ -2226,50 +2226,6 @@ align-items: flex-start;
 
 
 
-/* ROTATE WARNING */
-.rotate-warning {
-  display: none;
-}
-
-/* Aktif saat HP landscape */
-@media screen and (orientation: landscape) and (max-width: 768px) {
-  .rotate-warning {
-    display: flex;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 99999;
-
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .rotate-box {
-    color: #fff;
-    padding: 30px;
-  }
-
-  .rotate-box h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  .rotate-box p {
-    font-size: 14px;
-    opacity: 0.8;
-  }
-
-  /* Optional: disable scroll behind */
-  body {
-    overflow: hidden;
-  }
-}
-
-
-
-
-
 
 
 
