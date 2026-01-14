@@ -435,114 +435,7 @@ typeLoop();
 
 
 
-
-
-// input error/top upp sucsess
-
-const form = document.querySelector('.contact-form');
-const inputs = form.querySelectorAll('input, textarea');
-const button = form.querySelector('button');
-
-// Ambil toast
-const toast = document.getElementById('toastSuccess');
-
-// Buat span error di atas input (sekali saja)
-inputs.forEach(input => {
-  const span = document.createElement('span');
-  span.classList.add('error-msg');
-  span.textContent = ' '; 
-  input.insertAdjacentElement('beforebegin', span);
-});
-
-button.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  let isValid = true;
-
-  inputs.forEach(input => {
-    const errorMsg = input.previousElementSibling;
-
-    if (!input.value.trim()) {
-      errorMsg.textContent = 'Harap diisi dulu';
-      errorMsg.classList.add('show');
-      // input.style.border = '2px solid #ff4d4f';
-      isValid = false;
-    } else {
-      errorMsg.textContent = ' ';
-      errorMsg.classList.remove('show');
-      input.style.border = 'none';
-    }
-  });
-
-  if (isValid) {
- 
-    toast.classList.add('show');
-
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 2500);
-
-    form.reset();
-
-    // reset error state 
-    inputs.forEach(input => {
-      const errorMsg = input.previousElementSibling;
-      errorMsg.textContent = ' ';
-      errorMsg.classList.remove('show');
-      input.style.border = 'none';
-    });
-  }
-});
-
-
-
-// btn scroll/animated
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollItems = document.querySelectorAll(".certificate-card, .view-all .btn-primary");
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          // Jangan unobserve kalau mau animasi bisa retrigger di mobile
-          // observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.1 // lebih rendah biar mobile detect lebih awal
-    }
-  );
-
-  scrollItems.forEach(el => observer.observe(el));
-});
-
-
-// contact /send
-
-const scrollElements = document.querySelectorAll('.contact-box, .contact-form, .contact-image');
-
-function handleScrollAnimation() {
-  const windowHeight = window.innerHeight;
-
-  scrollElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-
-    // tambah class sekali saja
-    if(rect.top < windowHeight - 50 && !el.classList.contains('scroll-active')) {
-      el.classList.add('scroll-active');
-    }
-  });
-}
-
-window.addEventListener('scroll', handleScrollAnimation);
-window.addEventListener('load', handleScrollAnimation);
-
-
-
-// 3 boxes
+// 3 boxes fade
 
 document.addEventListener("DOMContentLoaded", function() {
   // semua elemen yang mau fade
@@ -637,144 +530,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// text area fade
-document.addEventListener("DOMContentLoaded", function() {
-  const elements = Array.from(document.querySelectorAll(
-    '.contact-form, .contact-form h2, .contact-form p, .contact-form input, .contact-form textarea, .contact-form button'
-  ));
-  const windowHeight = window.innerHeight;
+// fade btn
 
-  function revealContact() {
-    // elemen yang belum aktif
-    const hiddenElements = elements.filter(el => !el.classList.contains('active'));
+  const fadeElements = document.querySelectorAll('.fade-scroll');
 
-    // ambil elemen yang terlihat saat ini
-    const visibleElements = hiddenElements.filter(el => {
-      const rect = el.getBoundingClientRect();
-      return rect.top < windowHeight && rect.bottom > 0;
-    });
+  const observerBTN = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-    // tambahkan stagger per batch
-    visibleElements.forEach((el, i) => {
-      el.style.transitionDelay = (i * 0.1) + 's';
-      el.classList.add('active');
-    });
+  fadeElements.forEach(el => observer.observe(el));
+
+
+  // top up
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.target.reset();
+    document.getElementById("popupSuccess").classList.add("show");
   }
 
-  // jalankan sekali saat load → elemen visible langsung muncul
-  revealContact();
-
-  // jalankan tiap scroll
-  window.addEventListener('scroll', revealContact);
-});
-
-
-// fade contact box
-document.addEventListener("DOMContentLoaded", function() {
-  const elements = Array.from(document.querySelectorAll('.contact-box, .contact-form, .contact-image'));
-  const windowHeight = window.innerHeight;
-
-  function revealElements() {
-    // ambil elemen yang belum aktif
-    const hiddenElements = elements.filter(el => !el.classList.contains('scroll-active'));
-
-    // ambil elemen yang terlihat saat ini
-    const visibleElements = hiddenElements.filter(el => {
-      const rect = el.getBoundingClientRect();
-      return rect.top < windowHeight && rect.bottom > 0;
-    });
-
-    // stagger per batch
-    visibleElements.forEach((el, i) => {
-      el.style.transitionDelay = (i * 0.15) + 's';
-      el.classList.add('scroll-active');
-    });
+  function closePopup() {
+    document.getElementById("popupSuccess").classList.remove("show");
   }
-
-  // jalankan sekali saat load → elemen visible langsung muncul
-  revealElements();
-
-  // jalankan tiap scroll
-  window.addEventListener('scroll', revealElements);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

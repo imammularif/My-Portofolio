@@ -414,10 +414,11 @@ Learned how to process data, create charts, build KPI metrics, and develop inter
   </div>
 </section>
 
-<!-- LINK BUTTON -->
-<div class="view-all">
-  <a href="mini_project.html" class="btn-primary">View All Projects</a>
-</div>
+<section class="single-btn-section fade-scroll">
+  <a href="mini_project.html" class="single-btn">View All Project</a>
+</section>
+
+
 
 
 <!------------------------------------------------------------------------------------------------------------>
@@ -463,9 +464,10 @@ Learned how to process data, create charts, build KPI metrics, and develop inter
   </div>
 </section>
 
-<div class="view-all">
-  <a href="certificate.html" class="btn-primary">View All Sertificate</a>
-</div>
+<section class="single-btn-section fade-scroll">
+  <a href="certificate.html" class="single-btn">View All Certificate</a>
+</section>
+
 
 
 <!------------------------------------------------------------------------------------------------------------>
@@ -475,118 +477,60 @@ Learned how to process data, create charts, build KPI metrics, and develop inter
 
 <!------------------------------------------------------------------------------------------------------------>
 
+<section id="contact" class="contact-title-section fade-scroll">
+  <h2>Get In Touch</h2>
+  <p>Punya ide keren, project, atau cuma mau say hi?  
+     Jangan ragu, kontak aku aja 🚀
+  </p>
+</section>
 
-<!--============================ contact me ================= -->
 
-<!-- send messege -->
-
-<section id="contact" class="contact-section">
-  <div class="contact-container">
-
-    <!-- LEFT : FORM -->
-    <div class="contact-form reveal delay-1">
-      <h2>Send Me a Message</h2>
-      <p>Let’s build something cool together 🚀</p>
-
-      <!-- Name Inputs -->
-      <div class="input-row">
-        <div class="input-wrapper">
-          <span class="error-msg"></span>
-          <input type="text" placeholder="*First Name" required>
-        </div>
-        <div class="input-wrapper">
-          <span class="error-msg"></span>
-          <input type="text" placeholder="*Last Name" required>
-        </div>
-      </div>
-
-      <!-- Email Input -->
-      <div class="input-wrapper">
-        <span class="error-msg"></span>
-        <input type="email" placeholder="*Email Address" required>
-      </div>
-
-      <!-- Message Textarea -->
-      <div class="input-wrapper">
-        <span class="error-msg"></span>
-        <textarea placeholder="*Your Message..." rows="5" required></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <button type="submit">Send Message</button>
-    </div>
-
+<section class="contact-split-section">
   
+  <!-- CONTACT FORM BOX -->
+  <div class="contact-box fade-scroll">
+    <h2>Contact Me</h2>
+    <p>Ada ide, project, atau kolaborasi?  
+      Jangan ditahan. Gas 🚀
+    </p>
 
-    <!-- RIGHT : IMAGE -->
-    <div class="contact-image reveal delay-2">
-      <img src="image/person3d.png" alt="Contact Image">
-    </div>
-
+    <!-- GANTI INI -->
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
+
+  <!-- SOCIAL MEDIA BOX -->
+  <div class="social-box fade-scroll">
+    <h2>Find Me</h2>
+    <p>Lebih cepet nyapa? Muncul di sini 👇</p>
+
+    <div class="social-list">
+      <a href="https://github.com/imammularif" class="social-item">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/imammularif/" class="social-item">💼 LinkedIn</a>
+      <a href="https://www.instagram.com/imammularf/?next=%2F" class="social-item">📸 Instagram</a>
+      <a href="https://wa.me/6281238646945" target="_blank" class="social-item">💬 WhatsApp</a>
+    </div>
+  </div>
+
 </section>
 
 
-<div class="toast toast-success" id="toastSuccess">
-  ✅ Form berhasil dikirim!
+<!-- POPUP SUCCESS -->
+<div class="popup-success" id="popupSuccess">
+  <div class="popup-box">
+    <h3>✅ Message Sent!</h3>
+    <p>Makasih yaa 🙌  
+       Pesan kamu sudah terkirim.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
 </div>
-<!------------------------------------------------------------------------------------------------------------>
-
-<!-- GARIS PEMBATAS -->
-<hr class="section-divider">
 
 
-<!------------------------------------------------------------------------------------------------------------>
 
-
-<!-- comntact -->
-<section class="contact-section2">
-
-  <div class="contact-grid">
-    <!-- EMAIL -->
-    <div class="contact-box reveal delay-1">
-      <i class="fa-solid fa-envelope contact-icon"></i>
-      <h3>Email</h3>
-      <p>Uchiha@mail.com</p>
-    </div>
-
-    <!-- PHONE -->
-    <div class="contact-box reveal delay-2">
-      <i class="fa-solid fa-phone contact-icon"></i>
-      <h3>Phone</h3>
-      <p>+62 123-1234-123</p>
-    </div>
-
-    <!-- LOCATION -->
-    <div class="contact-box reveal delay-3">
-      <i class="fa-solid fa-location-dot contact-icon"></i>
-      <h3>Location</h3>
-      <p>Earth-Asia-Asean-Indonesia</p>
-    </div>
-
-    <!-- SOCIAL -->
-    <div class="contact-box reveal delay-4">
-      <i class="fa-solid fa-share-nodes contact-icon"></i>
-      <h3>Social Media</h3>
-
-      <div class="social-icons">
-        <a href="https://github.com/imammularif" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a href="https://www.instagram.com/imammularf/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/imammularif/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ========================= FOOTER ============================= -->
@@ -603,6 +547,8 @@ Learned how to process data, create charts, build KPI metrics, and develop inter
 
 </body>
 </html>
+
+
 
 
 
