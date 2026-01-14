@@ -1887,14 +1887,25 @@ align-items: flex-start;
   cursor: pointer;
   background: yellow;
   color: #000;
-  transition: all 0.3s ease;
+  
   margin-top: 80px;
+
+  box-shadow: 0 10px 25px rgba(255, 208, 0, 0.4);
 }
 
 .contact-form button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(255, 255, 0, 0.5);
+  box-shadow: 0 5px 10px rgba(77, 163, 255, 0.6);
 }
+
+
+
+
+
+
+
+
+
 
 /* fade */
 .contact-form,

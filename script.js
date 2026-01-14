@@ -1,12 +1,3 @@
-// PWA
-
-self.addEventListener("install", (e) => {
-  self.skipWaiting();
-});
-
-self.addEventListener("activate", (e) => {
-  clients.claim();
-});
 
 
 /* ========================== LAYOUT RESPONSIVE ============================== */
@@ -706,6 +697,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // jalankan tiap scroll
   window.addEventListener('scroll', revealElements);
 });
+
 
 
 
