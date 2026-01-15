@@ -79,9 +79,9 @@ function toggleMenu(btn) {
   if (!menu) return;
 
   menu.classList.toggle("show");
-
   btn.innerHTML = menu.classList.contains("show") ? "✕" : "☰";
 }
+
 
 /* DROPDOWN (MOBILE) */
 

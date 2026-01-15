@@ -267,8 +267,8 @@ html {
   left: 50%;
   transform: translateX(-50%);
 
-  width: calc(100% - 5px); /* jarak kiri kanan */
-  max-width: 1300px;       /* biar gak kepanjangan */
+  width: calc(100% - 5px); 
+  max-width: 1300px;      
 
   display: flex;
   align-items: center;
@@ -284,8 +284,6 @@ html {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   z-index: 9999;
 }
-
-
 
 
 
@@ -395,7 +393,14 @@ html {
   border: none;
   cursor: pointer;
   color: yellow;
+
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
+
+.hamburger:active {
+  transform: rotate(90deg) scale(1.1);
+}
+
 
 /* ================= DROPDOWN ================= */
 .dropdown {
