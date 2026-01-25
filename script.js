@@ -560,23 +560,3 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("popupSuccess").classList.remove("show");
   }
 
-
-// ml
-const gamingBox = document.querySelector('.gaming-box');
-
-const observerML = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target); // ⬅️ muncul sekali
-      }
-    });
-  },
-  {
-    threshold: 0.3
-  }
-);
-
-observerML.observe(gamingBox);
-
