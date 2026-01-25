@@ -1312,10 +1312,17 @@ html {
   margin: 0;
 
   display: grid;
-  grid-template-columns: 1fr 1fr; /* kiri | kanan */
+
+  /* maksimal 4 item ke bawah */
+  grid-template-rows: repeat(4, auto);
+
+  /* abis 4 → pindah ke kanan */
+  grid-auto-flow: column;
+
   column-gap: 30px;
   row-gap: 8px;
 }
+
 
 
 .gaming-list li {
