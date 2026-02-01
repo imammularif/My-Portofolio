@@ -825,9 +825,6 @@ html {
 }
 
 
-
-
-
 /* ============================== About =================================== */
 
 /* ANIMASI AWAL (sebelum kena observer) */
@@ -1263,13 +1260,6 @@ html {
   text-align: right;
   
 }
-
-.timeline-item.left .timeline-box {
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: 12px; /* lebih kecil = makin ke kanan */
-}
-
 
 
 /* POSISI KANAN */
