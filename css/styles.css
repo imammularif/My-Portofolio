@@ -644,17 +644,7 @@ html {
   }
 }
 
-@media (max-width: 768px) {
-  .typing-text {
-    line-height: 1.2;
-    height: 1.2em;          
-    display: inline-flex;   
-    align-items: center;    
-    
-    border-right: 2px solid yellow; 
-    transform: translateY(0); 
-  }
-}
+
 
 /* Matikan hover img (mobile) */
 @media (max-width: 768px) {
@@ -687,8 +677,6 @@ html {
     opacity: 0;
   }
 }
-
-
 
 
 /* Content 1 */
@@ -775,7 +763,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3200px;   /* gedein di sini */
+    width: 3200px;   
     height: auto;
   }
 
