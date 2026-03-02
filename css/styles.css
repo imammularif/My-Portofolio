@@ -1215,6 +1215,33 @@ html {
   object-fit: contain;
 }
 
+.icon-item[title="Skilvul"] img {
+  width: 80px !important;
+  height: 60px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="DQLab"] img {
+  width: 70px !important;
+  height: 60px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="W3Schools"] img {
+  width: 100px !important;
+  height: 90px !important;
+  max-width: none;
+  object-fit: contain;
+}
+
+.icon-item[title="UTY"] img {
+  width: 55px !important;
+  height: 70px !important;
+  max-width: none;
+  object-fit: contain;
+}
 
 .icon-item {
   opacity: 0;
@@ -1228,6 +1255,14 @@ html {
     opacity 0.5s ease,
     transform 0.5s ease;
 }
+
+.icon-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(77, 163, 255, 0.8);
+}
+
+
+/* ------------------------------------------ */
 
 
 
