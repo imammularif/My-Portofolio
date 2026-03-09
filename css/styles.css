@@ -1257,7 +1257,7 @@ html {
 }
 
 .icon-item:hover {
-  transform: translateY(-6px);
+  /* transform: translateY(-6px); */
   box-shadow: 0 10px 25px rgba(77, 163, 255, 0.8);
 }
 
