@@ -1280,7 +1280,7 @@ html {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 40px; /* makin besar = makin pendek ke bawah */
   left: 50%;
   width: 4px;
   background: #facc15;
@@ -1293,6 +1293,7 @@ html {
 .timeline-item.left {
   left: 0;
   text-align: right;
+  margin-top: -5px;
   
 }
 
@@ -1301,6 +1302,7 @@ html {
 .timeline-item.right {
   left: 50%;
   text-align: left;
+  margin-top: -5px;
 }
 
 /* BOX ISI */
