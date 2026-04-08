@@ -1,4 +1,4 @@
-# 🚀 Personal Web Portfolio
+# 🚀 Personal Web Portfolio (v1.0 Release)
 
 Website portfolio pribadi yang dibuat untuk menampilkan profil, skill, pengalaman, dan project dalam satu tempat.
 
