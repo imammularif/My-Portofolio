@@ -23,10 +23,12 @@ The website was built from scratch without using templates, with a focus on clea
 ## 📸 Preview  
 
 ### 🏠 Homepage  
-![Homepage](assets/homepage.png)
+![Homepage](https://github.com/imammularif/My-Portofolio/blob/main/Preview/LandingPage.png)
 
 ### 📂 Projects Section  
-![Projects](assets/projects.png)
+![Projects](https://github.com/imammularif/My-Portofolio/blob/main/Preview/Project.png)
+
+> A modern and responsive personal portfolio interface showcasing profile, skills, and projects.
 
 ## 🛠️ Tech Stack  
 
@@ -59,15 +61,6 @@ The website was built from scratch without using templates, with a focus on clea
 - 🧭 Structured navigation for better user experience  
 - 📂 Project showcase section  
 
----
-
-## 📸 Preview  
-
-<p align="center">
-  <img src="assets/portfolio-preview.png" width="700"/>
-</p>
-
-> A modern and responsive personal portfolio interface showcasing profile, skills, and projects.
 
 ---
 
