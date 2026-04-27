@@ -20,6 +20,14 @@ The website was built from scratch without using templates, with a focus on clea
 
 ---
 
+## 📸 Preview  
+
+### 🏠 Homepage  
+![Homepage](assets/homepage.png)
+
+### 📂 Projects Section  
+![Projects](assets/projects.png)
+
 ## 🛠️ Tech Stack  
 
 ### 🌐 Frontend  
