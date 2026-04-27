@@ -16,19 +16,27 @@ The website was built from scratch without using templates, with a focus on clea
 ---
 
 ## 🌐 Live Demo  
-🔗 https://imammularif.github.io/My-Portofolio/
+🔗 https://imammularif.github.io/My-Portofolio/  
+
+> Explore the live portfolio to see the full experience.
 
 ---
-
 ## 📸 Preview  
 
-### 🏠 Homepage  
-![Homepage](https://github.com/imammularif/My-Portofolio/blob/main/Preview/LandingPage.png)
+<p align="center">
+  <img src="https://github.com/imammularif/My-Portofolio/blob/main/Preview/LandingPage.png" width="700"/><br/>
+  <sub>Homepage</sub>
+</p>
 
-### 📂 Projects Section  
-![Projects](https://github.com/imammularif/My-Portofolio/blob/main/Preview/Project.png)
+<p align="center">
+  <img src="https://github.com/imammularif/My-Portofolio/blob/main/Preview/Project.png" width="700"/><br/>
+  <sub>Projects Section</sub>
+</p>
 
-> A modern and responsive personal portfolio interface showcasing profile, skills, and projects.
+<p align="center">
+  <em>Modern and responsive personal portfolio showcasing profile, skills, and projects.</em>
+</p>
+
 
 ## 🛠️ Tech Stack  
 
@@ -56,10 +64,10 @@ The website was built from scratch without using templates, with a focus on clea
 
 ## 📌 Features  
 - ✨ Clean and modern user interface  
-- 📱 Fully responsive design (desktop, tablet, mobile)  
+- 📱 Fully responsive across all devices  
 - 🎯 Interactive sections with smooth animations  
-- 🧭 Structured navigation for better user experience  
-- 📂 Project showcase section  
+- 🧭 Intuitive navigation experience  
+- 📂 Dynamic project showcase  
 
 
 ---
