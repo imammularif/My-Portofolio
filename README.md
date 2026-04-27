@@ -1,69 +1,111 @@
-# 🚀 Personal Web Portfolio (v1.0 Release)
+# 🚀 Personal Web Portfolio (v1.0)
 
-Website portfolio pribadi yang dibuat untuk menampilkan profil, skill, pengalaman, dan project dalam satu tempat.
+## 📌 Project Overview  
+This is my personal web portfolio designed to showcase my profile, technical skills, and selected projects in a single, accessible platform.  
 
-Project ini dibangun dari nol tanpa template, dengan fokus ke tampilan modern, interaktif, dan responsive.
-
----
-
-## 🛠️ Tech Stack & Tools
-
-### 🌐 Frontend
-- HTML5 → struktur utama website  
-- CSS3 → styling, layout (Flexbox & Grid), dan animasi  
-- JavaScript (Vanilla) → interaksi dan efek dinamis  
+The website was built from scratch without using templates, with a focus on clean design, interactivity, and responsive user experience.
 
 ---
 
-### 🎨 Styling & UI
-- Custom CSS (tanpa framework utama)  
-- Flexbox & CSS Grid untuk layout  
-- Media Query untuk responsive design  
-- Transition & Transform untuk animasi  
+## 🎯 Objective  
+- Create a personal branding platform  
+- Showcase projects and technical skills  
+- Practice front-end development fundamentals  
+- Build a responsive and interactive web interface  
 
 ---
 
-### ⚙️ Tools Pendukung
-- Visual Studio Code → code editor  
-- Google Chrome DevTools → debugging & testing  
-- Git & GitHub → version control  
+## 🌐 Live Demo  
+🔗 https://imammularif.github.io/My-Portofolio/  
+
+> Explore the live portfolio to see the full experience.
+
+---
+## 📸 Preview  
+
+<p align="center">
+  <img src="https://github.com/imammularif/My-Portofolio/blob/main/Preview/LandingPage.png" width="700"/><br/>
+  <sub>Homepage</sub>
+</p>
+
+<p align="center">
+  <img src="https://github.com/imammularif/My-Portofolio/blob/main/Preview/Project.png" width="700"/><br/>
+  <sub>Projects Section</sub>
+</p>
+
+<p align="center">
+  <em>Modern and responsive personal portfolio showcasing profile, skills, and projects.</em>
+</p>
+
+
+## 🛠️ Tech Stack  
+
+### 🌐 Frontend  
+- HTML5 – structure and semantic layout  
+- CSS3 – styling, layout, and animations  
+- JavaScript (Vanilla) – interactivity and dynamic behavior  
 
 ---
 
-## 📌 Struktur Halaman
-
-- Hero Section → perkenalan singkat  
-- About → informasi diri  
-- Skills → teknologi yang dikuasai  
-- Experience / Timeline → perjalanan & pengalaman  
-- Projects → showcase project  
-- Contact → form atau informasi kontak  
+### 🎨 Styling & UI  
+- Custom CSS (no main framework)  
+- Flexbox & CSS Grid for layout  
+- Media Queries for responsive design  
+- CSS Transitions & Transformations for animations  
 
 ---
 
-## 📱 Responsive Design
-
-Website sudah dioptimasi untuk:
-- Desktop  
-- Tablet  
-- Mobile (masih terus dikembangkan)  
+### ⚙️ Tools  
+- Visual Studio Code – development environment  
+- Chrome DevTools – debugging & testing  
+- Git & GitHub – version control  
 
 ---
 
-## ⚡ Highlight Teknis
+## 📌 Features  
+- ✨ Clean and modern user interface  
+- 📱 Fully responsive across all devices  
+- 🎯 Interactive sections with smooth animations  
+- 🧭 Intuitive navigation experience  
+- 📂 Dynamic project showcase  
 
-- Menggunakan kombinasi Flexbox & Grid  
-- Implementasi timeline custom dengan CSS  
-- Animasi menggunakan CSS transition & transform  
-- Struktur code sederhana dan mudah dikembangkan  
+
+---
+
+## 🧩 Page Structure  
+- **Hero Section** – brief introduction  
+- **About** – personal background  
+- **Skills** – technical stack  
+- **Experience / Timeline** – learning journey  
+- **Projects** – portfolio showcase  
+- **Contact** – contact information  
 
 ---
 
-## 📈 Pengembangan Selanjutnya
-
-- Optimasi performa  
-- Penambahan fitur interaktif  
-- Integrasi backend untuk contact form  
-- Improvement UI/UX  
+## ⚡ Technical Highlights  
+- Combination of Flexbox and CSS Grid for layout control  
+- Custom timeline implementation using CSS  
+- Smooth animations using transitions and transforms  
+- Modular and maintainable code structure  
 
 ---
+
+## 🧠 Key Learnings  
+- Building a complete website from scratch  
+- Implementing responsive design principles  
+- Structuring a clean and maintainable front-end project  
+- Enhancing user experience with simple animations  
+
+---
+
+## 🚀 Future Improvements  
+- Performance optimization  
+- Enhanced UI/UX design  
+- Backend integration for contact form  
+- Additional interactive features  
+
+---
+
+## 💡 Reflection  
+This project represents my effort to build a personal brand while applying front-end development skills.  
+It helped me understand how to combine design, structure, and interactivity into a cohesive user experience.
