@@ -1,27 +1,38 @@
-# 🚀 Personal Web Portfolio (v1.0)
+# 🚀 Personal Portfolio Website
 
-## 📌 Project Overview  
-This is my personal web portfolio designed to showcase my profile, technical skills, and selected projects in a single, accessible platform.  
-
-The website was built from scratch without using templates, with a focus on clean design, interactivity, and responsive user experience.
-
----
-
-## 🎯 Objective  
-- Create a personal branding platform  
-- Showcase projects and technical skills  
-- Practice front-end development fundamentals  
-- Build a responsive and interactive web interface  
+![HTML5](https://img.shields.io/badge/HTML5-Frontend-orange)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-yellow)
+![Responsive Design](https://img.shields.io/badge/UI-Responsive-success)
+![Portfolio](https://img.shields.io/badge/Personal-Portfolio-purple)
 
 ---
 
-## 🌐 Live Demo  
-🔗 https://imammularif.github.io/My-Portofolio/  
+## 📌 Project Overview
 
-> Explore the live portfolio to see the full experience.
+This project is a personal portfolio website built to showcase my profile, technical skills, and selected projects in a clean and interactive web experience.
+
+The website was developed from scratch without using templates, focusing on responsive design, user experience, and modern frontend development practices.
 
 ---
-## 📸 Preview  
+
+## 🎯 Objectives
+- Build a personal branding platform
+- Showcase projects and technical skills
+- Practice frontend development fundamentals
+- Create a responsive and interactive user interface
+- Improve UI/UX implementation skills
+
+---
+
+## 🌐 Live Demo
+🔗 https://imammularif.github.io/My-Portofolio/
+
+> Explore the live portfolio website to experience the full interface and project showcase.
+
+---
+
+## 📸 Preview
 
 <p align="center">
   <img src="https://github.com/imammularif/My-Portofolio/blob/main/Preview/LandingPage.png" width="700"/><br/>
@@ -34,78 +45,91 @@ The website was built from scratch without using templates, with a focus on clea
 </p>
 
 <p align="center">
-  <em>Modern and responsive personal portfolio showcasing profile, skills, and projects.</em>
+  <em>Modern and responsive portfolio website showcasing profile, skills, and selected projects.</em>
 </p>
 
+---
 
-## 🛠️ Tech Stack  
+## 🛠️ Tech Stack
 
-### 🌐 Frontend  
-- HTML5 – structure and semantic layout  
-- CSS3 – styling, layout, and animations  
-- JavaScript (Vanilla) – interactivity and dynamic behavior  
+### 🌐 Frontend
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
 ---
 
-### 🎨 Styling & UI  
-- Custom CSS (no main framework)  
-- Flexbox & CSS Grid for layout  
-- Media Queries for responsive design  
-- CSS Transitions & Transformations for animations  
+### 🎨 Styling & UI
+- Custom CSS
+- Flexbox & CSS Grid
+- Media Queries
+- CSS Animations & Transitions
 
 ---
 
-### ⚙️ Tools  
-- Visual Studio Code – development environment  
-- Chrome DevTools – debugging & testing  
-- Git & GitHub – version control  
+### ⚙️ Development Tools
+- Visual Studio Code
+- Chrome DevTools
+- Git & GitHub
 
 ---
 
-## 📌 Features  
-- ✨ Clean and modern user interface  
-- 📱 Fully responsive across all devices  
-- 🎯 Interactive sections with smooth animations  
-- 🧭 Intuitive navigation experience  
-- 📂 Dynamic project showcase  
-
-
----
-
-## 🧩 Page Structure  
-- **Hero Section** – brief introduction  
-- **About** – personal background  
-- **Skills** – technical stack  
-- **Experience / Timeline** – learning journey  
-- **Projects** – portfolio showcase  
-- **Contact** – contact information  
+## ✨ Features
+- 📱 Fully responsive design
+- ✨ Modern and clean user interface
+- 🎯 Interactive animations and transitions
+- 🧭 Smooth navigation experience
+- 📂 Dynamic project showcase section
+- 📌 Organized portfolio structure
 
 ---
 
-## ⚡ Technical Highlights  
-- Combination of Flexbox and CSS Grid for layout control  
-- Custom timeline implementation using CSS  
-- Smooth animations using transitions and transforms  
-- Modular and maintainable code structure  
+## 🧩 Website Structure
+- **Hero Section** – personal introduction
+- **About Section** – background information
+- **Skills Section** – technical stack overview
+- **Timeline Section** – learning and experience journey
+- **Projects Section** – portfolio showcase
+- **Contact Section** – contact information
 
 ---
 
-## 🧠 Key Learnings  
-- Building a complete website from scratch  
-- Implementing responsive design principles  
-- Structuring a clean and maintainable front-end project  
-- Enhancing user experience with simple animations  
+## ⚡ Technical Highlights
+- Responsive layout using Flexbox & CSS Grid
+- Custom timeline implementation
+- Interactive UI with CSS transitions & animations
+- Structured and maintainable frontend code
+- Clean component organization
 
 ---
 
-## 🚀 Future Improvements  
-- Performance optimization  
-- Enhanced UI/UX design  
-- Backend integration for contact form  
-- Additional interactive features  
+## 🧠 Key Learnings
+- Building a portfolio website from scratch
+- Implementing responsive web design
+- Improving frontend structure and maintainability
+- Enhancing user experience through interaction design
+- Combining design and functionality effectively
 
 ---
 
-## 💡 Reflection  
-This project represents my effort to build a personal brand while applying front-end development skills.  
-It helped me understand how to combine design, structure, and interactivity into a cohesive user experience.
+## 🚀 Future Improvements
+- Improve website performance optimization
+- Add backend integration for contact forms
+- Enhance accessibility and UI/UX
+- Add dark mode feature
+- Implement more dynamic interactions
+
+---
+
+## 💡 Reflection
+This project represents my journey in building a professional online presence while applying frontend development skills into a real-world project.
+
+It helped strengthen my understanding of responsive design, interface structure, and creating engaging user experiences.
+
+---
+
+## 👨‍💻 Author
+**Imammul Arif**  
+📍 Indonesia  
+🔗 LinkedIn: https://linkedin.com/in/imammularif  
+🔗 GitHub: https://github.com/imammularif
